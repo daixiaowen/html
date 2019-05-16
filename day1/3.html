@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom</title>
+</head>
+<body>
+
+    <div id="div1">
+        <p id="p1">这是一个段落</p>
+        <p id="p2">这是另一个段落</p>
+    </div>
+
+    <script>
+        var para = document.createElement("p");
+        var node = document.createTextNode("这是最新的一个p段落");
+        para.append(node);
+
+        var id_element = document.getElementById("div1");
+        id_element.appendChild(para);
+
+        id_element.removeChild(para);
+    </script>
+
+    <script>
+        var arr = Array();
+        arr[0] = "zhangsan";
+        arr[1] = "lisi";
+
+        for (i=0;i<arr.length;i++){
+            document.write(arr[i]+"<br/>")
+        }
+
+        for (x in arr)
+            {
+                document.write(arr[x]+"<br/>");
+            }
+    </script>
+
+    <script>
+        document.write(Math.random());
+
+        window.open("http://www.baidu.com");
+    </script>
+</body>
+</html>
